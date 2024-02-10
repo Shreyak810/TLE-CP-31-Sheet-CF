@@ -33,7 +33,17 @@ void solve() {
     vector<int> a(n);
     for(int i=0;i<n;i++)
         cin>>a[i];
-    int cnt=0;
+    //If the k is present in the array means there should be exists a non-empty subsegment of a where k is the most common element.If k is not present means non-subsegment is not exists.
+    if(find(a.begin(),a.end(),k)!=a.end())
+    {
+        yes;
+    }
+    else
+    {
+        no;
+    }
+    
+    /*int cnt=0;
     for(int i=0;i<n;i++)
     {
         if(a[i]==k)
@@ -42,7 +52,7 @@ void solve() {
     if(cnt==0)
         no;
     else
-        yes;
+        yes;*/
 } 
 
 
