@@ -26,7 +26,12 @@ ll inf = 1e18;
 #define vint(v,n) for(int i=0;i<n;i++) cin>>v[i]
 #define even cout<<"EVEN\n";
 #define odd cout<<"ODD\n";
-
+//let's say team1 won the match against team2 and team1 scored 2 goal and team 2 scored 1 goal.
+//Efficiency is difference of team1 score and team2 score 
+//That's why team1's effficiency is 2-1=1
+//and team2's efficiency would be 1-2=-1
+//Total efficiency of all teams is 0.
+//So,Missing team efficiency is total efficiency * -1
 void solve() {
     int n;
     cin>>n;
