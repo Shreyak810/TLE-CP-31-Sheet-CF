@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 //#include<ext/pb_ds/assoc_container.hpp>
 #include<ext/pb_ds/tree_policy.hpp>
@@ -29,7 +28,7 @@ ll inf = 1e18;
 #define odd cout<<"ODD\n";
 
 void solve() {
-     int n;
+    int n;
     cin >> n;
     vector<int> v(n);
     for(int i = 0; i < n; i++) {
@@ -46,7 +45,7 @@ void solve() {
             a.push_back(v[i]);
         }
     }
-    cout << a.size() << "\n";
+    cout << (int)a.size() << "\n";
     for(auto it : a) {
         cout << it << " ";
     }
@@ -58,7 +57,8 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     
-    ll t=1;//cin>>t;
+    ll t;
+    cin>>t;
     while(t--)
         solve();
 };
