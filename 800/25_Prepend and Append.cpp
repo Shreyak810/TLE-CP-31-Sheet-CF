@@ -28,29 +28,34 @@ ll inf = 1e18;
 #define odd cout<<"ODD\n";
 
 void solve() {
-    int sx, sy, dx, dy;
-    cin >> sx >> sy >> dx >> dy;
-    if (sx == dx && sy == dy) {
-        cout << 0 << sln;
-    } else if (sy <= dy) {
-        if (sy == dy && sx > dx) {
-            cout << sx - dx << sln;
-        } else if (sy == dy && sx < dx) {
-            cout << -1 << sln;
-        } else {
-            // Make sy equal to dy
-            int opr = dy - sy;
-            sx += opr;
-            // Check if sx < dx, if yes, then it is impossible
-            if (sx < dx) {
-                cout << -1 << sln;
-            } else {
-                cout << opr + sx - dx << sln;
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    if(n==1){
+        cout<<n<<sln;
+    }
+    else
+    {
+        int leftPtr=0,rightPtr=n-1;
+        while(leftPtr<rightPtr)
+        {
+            if(s[leftPtr]=='0' && s[rightPtr]=='1')
+            {
+                leftPtr++;
+                rightPtr--;
+            }
+            else if(s[leftPtr]=='1' && s[rightPtr]=='0')
+            {
+                leftPtr++;
+                rightPtr--;
+            }
+            else
+            {
+                break;
             }
         }
-    } else {
-        // sy > dy, then it is impossible to go from s to d
-        cout << -1 << sln;
+        cout<<rightPtr-leftPtr+1<<sln;
     }
 }
 
